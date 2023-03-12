@@ -94,7 +94,7 @@ body {
 
 .accordion__item :checked ~ .item__img .accordion__img {
   display: block;
-  animation: opacity 0.8s;
+  animation: opacity 1s;
 }
 .accordion__item :checked ~ .accordion__label .close-beth {
   transform: scale(-1, 1);
@@ -128,7 +128,7 @@ body {
 
   .accordion__item:hover > .item__img .accordion__img {
     display: block;
-    animation: opacity 0.8s;
+    animation: opacity 1s;
   }
 }
 
@@ -152,14 +152,20 @@ body {
     opacity: 0;
  }
   15%{
-    opacity: 0.15;
+    opacity: 0.1;
  }
+  25%{
+    opacity: 0.18;
+  }
   35%{
     opacity: 0.25;
  }
   50%{
     opacity: 0.5;
  }
+  60%{
+    opacity: 0.6;
+  }
   75% {
     opacity: 0.75;
   }
