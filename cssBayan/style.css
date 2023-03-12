@@ -1,0 +1,166 @@
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #183642;
+  font-size: 1.875rem;
+  background-color: #EAEAEA;
+  font-family: 'Acme', sans-serif;
+}
+
+img {
+  width: 25rem;
+  height: auto;
+  border-radius: 2%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ACCORDION */
+.accordion__wrapper {
+  padding-bottom: 4rem;
+}
+
+/* TITLE */
+
+.title__wrapper {
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+.title a {
+  color: #31718b;
+}
+.title a:hover {
+  color: #183642;
+  cursor: pointer;
+}
+
+/* ITEMS */
+
+.accordion__label,
+.item__img {
+  cursor: pointer;
+}
+
+.accordion__item {
+  width: 100%;
+}
+
+.accordion__item input,
+.item__img img {
+  display: none;
+}
+
+.accordion__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0.3125em;
+  border-bottom: 0.0625em solid #183642;
+}
+
+.close-beth {
+  visibility: hidden;
+  width: 4rem;
+  height: auto;
+  opacity: 0;
+ }
+
+.item__img .accordion__img {
+  transition: all 0.8s ease-in-out;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+/* CHECKED EFFECT */
+
+.accordion__item :checked ~ .item__img .accordion__img {
+  display: block;
+  animation: opacity 0.8s;
+}
+.accordion__item :checked ~ .accordion__label .close-beth {
+  transform: scale(-1, 1);
+}
+
+.accordion__item :checked ~ .accordion__label {
+  color: #183642;
+}
+
+/* HOVER EFFECT */
+
+/* .accordion__item:hover > label {
+  border-bottom: 0.0625em solid #31718b;
+} */
+
+.accordion__item:hover > .accordion__label .close-beth {
+  transform: scale(-1, 1);
+}
+
+.accordion:hover > .accordion__item .accordion__label .close-beth{
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.8s ease-in-out;
+}
+
+.accordion:hover > .accordion__item {
+  color: #31718b;
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+}
+
+.accordion__item:hover > .item__img .accordion__img {
+  display: block;
+  animation: opacity 0.8s;
+}
+
+/* ACTIVE EFFECT */
+.accordion__item :active ~ .accordion__label {
+  color: #31718b;
+}
+
+.accordion__item :active ~ .item__img .accordion__img,
+.accordion__item :active {
+  opacity: 0.8;
+}
+
+.accordion :active ~ .item__img .accordion__img,
+.accordion :active {
+  opacity: 0.8;
+}
+
+@keyframes opacity {
+  0%{
+    opacity: 0;
+ }
+  15%{
+    opacity: 0.15;
+ }
+  35%{
+    opacity: 0.25;
+ }
+  50%{
+    opacity: 0.5;
+ }
+  75% {
+    opacity: 0.75;
+  }
+  100%{
+    opacity: 1;
+ }
+}
