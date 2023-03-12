@@ -15,5 +15,5 @@ Pure CSS Accordion task from RS School (https://rs.school/js/)
 10. Font size should be changed at each device (mobile, tablet, desktop)
 
 ## Preview
-![CSS Accordion Memes](/cssBayan/cssBayan/assets/readme.md/preview.png)
+![CSS Accordion Memes](cssBayan/assets/readme.md/preview.png)
 
